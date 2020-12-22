@@ -72,3 +72,86 @@ header div a {
   display:inline-block;
   /* display:inline */
 }
+
+/* CONTEUDOS */
+.posts {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.post {
+  background-color: var(--color-purple);
+}
+
+.post-image img {
+  width: 100%;
+}
+
+.titulo, .autor, .tempo-leitura {
+  padding: 16px
+}
+
+.post-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.tempo-leitura {
+  filter: brightness(90%);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* MODAL */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden; 
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal-overlay .modal .modal-header {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+.modal,
+.close-modal,
+.maximize-modal {
+  color: black;
+  /* position: absolute; */
+  /* float: right; */
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+/* MODAL ACTIVE */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+iframe {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+}
