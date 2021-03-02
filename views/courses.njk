@@ -1,24 +1,12 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Conteúdo</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/rocketseat-education/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico" type="image/ico" />
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <div class="links">
-        <a href="https://discordapp.com/invite/gCRAFhc" target="_blank" rel="noopener noreferrer">Comunidade</a>
-        <a href="mailto:oi@rocketseat.com.br">Email</a>
-        <a href="tel:+5547992078767">Telefone</a>
-        <a href="about.html">Sobre</a>
-        <a href="conteudo.html">Conteúdo</a>
-      </div>
-    </header>
-    <div id="wrapper">
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Cursos</title>
+{% endblock %}
+
+{% block content %}
+
+<div id="wrapper">
       <h1>Conteúdos</h1>
     </div>
     <section class="posts">
@@ -93,5 +81,5 @@
 
     </div>
     <script src="scripts.js"></script>
-  </body>
-</html>
+
+{% endblock %}
