@@ -10,58 +10,26 @@
       <h1>Conteúdos</h1>
     </div>
     <section class="posts">
-      <div class="post" id="construindo-um-app-com-mapas-usando-react-native-maps-e-mapbox">
+      {%for article in articles%}
+      <div class="post" id="{{article.id}}">
         <div class="post-image">
-          <img src="https://blog.rocketseat.com.br/content/images/2020/10/teste.jpg" alt="Imagem">
+          <img src="{{article.img}}" alt="Imagem de {{article.title}}">
         </div>
         <div class="titulo">
-          <p>Construindo App com Mapa usando React Native Maps e MapBox</p>
+          <p>{{article.title}}</p>
         </div>
         <div class="post-info">
           <div class="autor">
-            <p>por Thiago Marinho</p>
+            <p>{{article.author}}</p>
           </div>
           <div class="tempo-leitura">
-            8 min de leitura
+            {{article.reading_time}}
           </div>
 
         </div>
       </div>
-
-      <div class="post" id="dark-mode-com-css-mudando-a-aparencia-do-blog-de-maneira-simples-e-rapida">
-        <div class="post-image">
-          <img src="https://blog.rocketseat.com.br/content/images/2020/10/dark-mode-com-css-mudando-a-aparencia-do-blog-de-maneira-simples-e-rapida.jpg" alt="Imagem">
-        </div>
-        <div class="titulo">
-          <p>Dark Mode com CSS — mudando a aparência do Blog de maneira simples e rápida</p>
-        </div>
-        <div class="post-info">
-          <div class="autor">
-            <p>por Thiago Marinho</p>
-          </div>
-          <div class="tempo-leitura">
-            3 min de leitura
-          </div>
-
-        </div>
-      </div>
-
-      <div class="post" id="upload-de-imagens-no-front-end-com-react-js-e-context-api-3">
-        <div class="post-image">
-          <img src="https://blog.rocketseat.com.br/content/images/2020/10/blog-rocketseat-upload-de-imagens-no-front-end-com-react-js-e-context-api.png" alt="Imagem">
-        </div>
-        <div class="titulo">
-          <p>Upload de imagens no Front End com ReactJS e Context API</p>
-        </div>
-        <div class="post-info">
-          <div class="autor">
-            <p>por Thiago Marinho</p>
-          </div>
-          <div class="tempo-leitura">
-            17 min de leitura
-          </div>
-        </div>
-      </div>
+      {%endfor%}
+      
     </section>
 
     <div class="modal-overlay">

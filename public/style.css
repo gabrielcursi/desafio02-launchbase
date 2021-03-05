@@ -132,6 +132,10 @@ header div a {
   right: 10px;
 }
 
+.maximize-modal {
+  position: relative;
+}
+
 .modal,
 .close-modal,
 .maximize-modal {
@@ -154,4 +158,9 @@ iframe {
   height: 90%;
   position: absolute;
   top: 5%;
+}
+
+/* ---- NOT FOUND ---- */
+.content {
+  text-align: center;
 }
