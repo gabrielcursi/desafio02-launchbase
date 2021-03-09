@@ -1,0 +1,22 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>{{article.title}}</title>
+{% endblock %}
+
+{% block content %}
+
+<div id="wrapper" class="article">
+  <div>
+    <h1>{{article.title}}</h1>
+  </div>
+  <section class="article">
+    <div class="post" id={{article.id}}>
+      <div class="post-article">
+        <iframe src="https://blog.rocketseat.com.br/{{article.id}}" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

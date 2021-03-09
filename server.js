@@ -47,6 +47,19 @@ server.get("/about", function (req, res) {
   return res.render("about", { about });
 });
 
+server.get("/course/:id", function (req, res) {
+  const id = req.params.id;
+
+  const article = articles.find(function (article) {
+    if (article.id === id) return true
+  });
+
+  if(!article) {
+    return res.render('not-found')
+  }
+  return res.render("course", { article });
+});
+
 server.use(function (req, res) {
   res.status(404).render("not-found");
 });

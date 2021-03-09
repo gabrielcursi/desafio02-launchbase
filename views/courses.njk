@@ -7,32 +7,31 @@
 {% block content %}
 
 <div id="wrapper">
-      <h1>Conteúdos</h1>
+  <h1>Conteúdos</h1>
+</div>
+<section class="posts">
+{%for article in articles%}
+  <div class="post" id="{{article.id}}">
+    <div class="post-image">
+      <img src="{{article.img}}" alt="Imagem de {{article.title}}">
     </div>
-    <section class="posts">
-      {%for article in articles%}
-      <div class="post" id="{{article.id}}">
-        <div class="post-image">
-          <img src="{{article.img}}" alt="Imagem de {{article.title}}">
-        </div>
-        <div class="titulo">
-          <p>{{article.title}}</p>
-        </div>
-        <div class="post-info">
-          <div class="autor">
-            <p>{{article.author}}</p>
-          </div>
-          <div class="tempo-leitura">
-            {{article.reading_time}}
-          </div>
-
-        </div>
+    <div class="titulo">
+      <p>{{article.title}}</p>
+    </div>
+    <div class="post-info">
+      <div class="autor">
+        <p>{{article.author}}</p>
       </div>
-      {%endfor%}
-      
-    </section>
+      <div class="tempo-leitura">
+        {{article.reading_time}}
+      </div>
+    </div>
+  </div>
+{%endfor%}
 
-    <div class="modal-overlay">
+</section>
+
+    {# <div class="modal-overlay">
       <div class="modal">
         <div class="modal-header">
           <a class="maximize-modal">
@@ -43,11 +42,10 @@
           </a>
         </div>
         <div class="modal-content">
-          <iframe src="" frameborder="0"></iframe>
         </div>
-      </div>
+      </div> #}
 
-    </div>
+    {# </div> #}
     <script src="scripts.js"></script>
 
 {% endblock %}
